@@ -1,4 +1,4 @@
-package com.pinslog.samples.samples
+package com.pinslog.samples.base
 
 import android.content.Context
 import android.os.Bundle
