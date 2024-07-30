@@ -76,7 +76,7 @@ class GraphActivity : AppCompatActivity() {
             isDragEnabled = false
             setScaleEnabled(true)
             setPinchZoom(false)
-            setDrawBorders(true)
+            setDrawBorders(false)
             legend.isEnabled = false
             clearData()
 
@@ -85,6 +85,8 @@ class GraphActivity : AppCompatActivity() {
                 lineWidth = 2.5f
                 color = getColor(R.color.teal_700)
                 setDrawCircles(false)
+                setDrawValues(false) // 데이터의 값을 표시하지 않음
+                mode = LineDataSet.Mode.CUBIC_BEZIER // 차트 데이터 간의 라인 모양 설정
             }
             val iLineDataSets = mutableListOf<ILineDataSet>()
             iLineDataSets.add(fakeDataSet)
@@ -100,6 +102,8 @@ class GraphActivity : AppCompatActivity() {
             lineWidth = 2.5f
             color = getColor(R.color.teal_700)
             setDrawCircles(false)
+            setDrawValues(false)
+            mode = LineDataSet.Mode.HORIZONTAL_BEZIER // 차트 데이터 간의 라인 모양 설정
         }
         val iLineDataSets = mutableListOf<ILineDataSet>()
         iLineDataSets.add(fakeLineDataSet)
